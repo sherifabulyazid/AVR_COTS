@@ -1,0 +1,49 @@
+/*
+ * DIO_Program.c
+ *
+ *  Created on: Dec 8, 2023
+ *      Author: hp
+ */
+#include "STD.h"
+#include "BIT_MATH.h"
+
+#include "DIO_Config.h"
+#include "DIO_Interface.h"
+#include "DIO_Private.h"
+#include "DIO_Register.h"
+
+void setPinDirection(uint8  Copy_Port ,  uint8 Copy_Pin ,  uint8 Copy_Direction)
+{
+	if (Copy_Pin <= 7)
+	{
+		if(Copy_Direction == OUTPUT)
+		{
+			switch(Copy_Port)
+			{
+				case DIO_PORTA:
+					SETBIT(DDRA,Copy_Pin);
+					break;
+				case DIO_PORTB:
+					SETBIT(DDRA,Copy_Pin);
+					break;
+				case DIO_PORTC:
+					SETBIT(DDRA,Copy_Pin);
+						break;
+				case DIO_PORTD:
+					SETBIT(DDRA,Copy_Pin);
+					break;
+				default:
+					break;
+			}
+		}
+		else if (Copy_Direction == INPUT)
+		{
+
+		}
+		else
+		{
+
+		}
+	}
+
+}
