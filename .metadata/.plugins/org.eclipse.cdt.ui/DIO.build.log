@@ -1,5 +1,10 @@
-17:14:59 **** Incremental Build of configuration Debug for project DIO ****
+00:33:30 **** Incremental Build of configuration Debug for project DIO ****
 make all 
+'Building file: ../DIO_Program.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"DIO_Program.d" -MT"DIO_Program.o" -c -o "DIO_Program.o" "../DIO_Program.c"
+'Finished building: ../DIO_Program.c'
+' '
 'Building file: ../main.c'
 'Invoking: AVR Compiler'
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
@@ -24,7 +29,7 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    1274 bytes (3.9% Full)
+Program:    2088 bytes (6.4% Full)
 (.text + .data + .bootloader)
 
 Data:          0 bytes (0.0% Full)
@@ -34,5 +39,5 @@ Data:          0 bytes (0.0% Full)
 'Finished building: sizedummy'
 ' '
 
-17:15:00 Build Finished. 0 errors, 0 warnings. (took 1s.426ms)
+00:33:32 Build Finished. 0 errors, 0 warnings. (took 2s.413ms)
 

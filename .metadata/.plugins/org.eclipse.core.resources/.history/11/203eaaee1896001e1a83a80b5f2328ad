@@ -179,8 +179,7 @@ uint8 DIO_uint8_SetPortDirection (uint8 Copy_uint8_Port, uint8 Copy_uint8_Direct
 }
 
 
-uint8 DIO_uint8_SetPortValue  (uint8 Copy_uint8_Port ,   uint8 Copy_uint8_Value )
-
+uint8 DIO_uint8_SetPortValue     (uint8 Copy_uint8_Port ,   uint8 Copy_uint8_Value )
 {
 	uint8 local_ErrorStatus=0;
 	if(Copy_uint8_Value == OUTPUT_HIGH)

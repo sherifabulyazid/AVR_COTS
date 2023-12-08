@@ -113,7 +113,7 @@ LOAD f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x4fa
+.text           0x00000000      0x828
  *(.vectors)
  .vectors       0x00000000       0x54 f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x00000000                __vectors
@@ -197,14 +197,23 @@ LOAD f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  .text.setPinVAlue
                 0x0000028a      0x21e ./DIO_Program.o
                 0x0000028a                setPinVAlue
- .text.main     0x000004a8       0x4e ./main.o
-                0x000004a8                main
- .text.libgcc   0x000004f6        0x0 f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x000004f6                . = ALIGN (0x2)
+ .text.DIO_uint8_SetPortDirection
+                0x000004a8      0x10e ./DIO_Program.o
+                0x000004a8                DIO_uint8_SetPortDirection
+ .text.DIO_uint8_SetPortValue
+                0x000005b6      0x10e ./DIO_Program.o
+                0x000005b6                DIO_uint8_SetPortValue
+ .text.DIO_uint8_GetPinValue
+                0x000006c4      0x112 ./DIO_Program.o
+                0x000006c4                DIO_uint8_GetPinValue
+ .text.main     0x000007d6       0x4e ./main.o
+                0x000007d6                main
+ .text.libgcc   0x00000824        0x0 f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00000824                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000004f6        0x0 f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x000004f6                exit
-                0x000004f6                _exit
+ .fini9         0x00000824        0x0 f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00000824                exit
+                0x00000824                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -223,11 +232,11 @@ LOAD f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000004f6        0x4 f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x00000824        0x4 f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x000004fa                _etext = .
+                0x00000828                _etext = .
 
-.data           0x00800060        0x0 load address 0x000004fa
+.data           0x00800060        0x0 load address 0x00000828
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
@@ -252,8 +261,8 @@ LOAD f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  *(.bss*)
  *(COMMON)
                 0x00800060                PROVIDE (__bss_end, .)
-                0x000004fa                __data_load_start = LOADADDR (.data)
-                0x000004fa                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00000828                __data_load_start = LOADADDR (.data)
+                0x00000828                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800060        0x0
                 0x00800060                PROVIDE (__noinit_start, .)
@@ -278,15 +287,15 @@ LOAD f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .signature
  *(.signature*)
 
-.stab           0x00000000      0x558
+.stab           0x00000000      0x870
  *(.stab)
- .stab          0x00000000      0x3fc ./DIO_Program.o
- .stab          0x000003fc      0x15c ./main.o
+ .stab          0x00000000      0x714 ./DIO_Program.o
+ .stab          0x00000714      0x15c ./main.o
                                 0x1ec (size before relaxing)
 
-.stabstr        0x00000000      0x3ab
+.stabstr        0x00000000      0x489
  *(.stabstr)
- .stabstr       0x00000000      0x3ab ./DIO_Program.o
+ .stabstr       0x00000000      0x489 ./DIO_Program.o
 
 .stab.excl
  *(.stab.excl)

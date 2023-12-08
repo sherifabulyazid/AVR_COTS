@@ -37,14 +37,10 @@
 #define OUTPUT_LOW   0
 
 uint8  setPinDirection(uint8  Copy_Port ,  uint8 Copy_pin ,  uint8 Copy_Direction);
-
 uint8 setPinVAlue(uint8  Copy_Port ,  uint8 Copy_Pin ,  uint8 Copy_Status);
-
 uint8 DIO_uint8_SetPortDirection (uint8 Copy_uint8_Port, uint8 Copy_uint8_Direction );
+uint8 DIO_uint8_SetPortValue     (uint8 Copy_uint8_Port ,   uint8 Copy_uint8_Value );
 
-uint8 DIO_uint8_SetPortValue  (uint8 Copy_uint8_Port ,   uint8 Copy_uint8_Value );
-
-uint8 DIO_uint8_GetPinValue (uint8 Copy_uint8_Port , uint8 Copy_uint8_Pin , uint8* Copy_uint8_Value);
 
 
 #endif

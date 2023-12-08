@@ -1,5 +1,32 @@
-17:14:59 **** Incremental Build of configuration Debug for project DIO ****
+00:30:06 **** Incremental Build of configuration Debug for project DIO ****
 make all 
+'Building file: ../DIO_Program.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"DIO_Program.d" -MT"DIO_Program.o" -c -o "DIO_Program.o" "../DIO_Program.c"
+In file included from ../DIO_Program.c:11:
+../DIO_Interface.h:42: error: expected declaration specifiers or '...' before 'Copy_uint8_Port'
+../DIO_Program.c:182: error: conflicting types for 'DIO_uint8_SetPortValue'
+../DIO_Interface.h:42: error: previous declaration of 'DIO_uint8_SetPortValue' was here
+make: *** [DIO_Program.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+00:32:57 **** Incremental Build of configuration Debug for project DIO ****
+make all 
+'Building file: ../DIO_Program.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"DIO_Program.d" -MT"DIO_Program.o" -c -o "DIO_Program.o" "../DIO_Program.c"
+In file included from ../DIO_Program.c:11:
+../DIO_Interface.h:42: error: expected declaration specifiers or '...' before 'Copy_uint8_Port'
+../DIO_Program.c:182: error: conflicting types for 'DIO_uint8_SetPortValue'
+../DIO_Interface.h:42: error: previous declaration of 'DIO_uint8_SetPortValue' was here
+make: *** [DIO_Program.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+00:33:30 **** Incremental Build of configuration Debug for project DIO ****
+make all 
+'Building file: ../DIO_Program.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"DIO_Program.d" -MT"DIO_Program.o" -c -o "DIO_Program.o" "../DIO_Program.c"
+'Finished building: ../DIO_Program.c'
+' '
 'Building file: ../main.c'
 'Invoking: AVR Compiler'
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
@@ -24,7 +51,7 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    1274 bytes (3.9% Full)
+Program:    2088 bytes (6.4% Full)
 (.text + .data + .bootloader)
 
 Data:          0 bytes (0.0% Full)

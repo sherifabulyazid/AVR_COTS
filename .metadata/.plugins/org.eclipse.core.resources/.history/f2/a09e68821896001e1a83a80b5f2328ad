@@ -179,8 +179,7 @@ uint8 DIO_uint8_SetPortDirection (uint8 Copy_uint8_Port, uint8 Copy_uint8_Direct
 }
 
 
-uint8 DIO_uint8_SetPortValue  (uint8 Copy_uint8_Port ,   uint8 Copy_uint8_Value )
-
+uint8 DIO_uint8_SetPortValue     (uint8 Copy_uint8_Port ,   uint8 Copy_uint8_Value )
 {
 	uint8 local_ErrorStatus=0;
 	if(Copy_uint8_Value == OUTPUT_HIGH)
@@ -233,34 +232,4 @@ uint8 DIO_uint8_SetPortValue  (uint8 Copy_uint8_Port ,   uint8 Copy_uint8_Value 
 	return local_ErrorStatus;
 }
 
-uint8 DIO_uint8_GetPinValue (uint8 Copy_uint8_Port , uint8 Copy_uint8_Pin , uint8* Copy_uint8_Value)
-{
-	uint8 local_ErrorStatus=0;
-	switch(Copy_uint8_Port)
-	{
-		case DIO_PORTA:
-			*Copy_uint8_Value = GETBIT(PINA , Copy_uint8_Pin);
-			break;
-		case DIO_PORTB:
-			*Copy_uint8_Value = GETBIT(PINB , Copy_uint8_Pin);
-			break;
-		case DIO_PORTC:
-			*Copy_uint8_Value = GETBIT(PINC , Copy_uint8_Pin);
-			break;
-		case DIO_PORTD:
-			*Copy_uint8_Value = GETBIT(PIND , Copy_uint8_Pin);
-			break;
-
-	}
-
-
-
-
-
-
-
-
-
-	return local_ErrorStatus;
-}
 
