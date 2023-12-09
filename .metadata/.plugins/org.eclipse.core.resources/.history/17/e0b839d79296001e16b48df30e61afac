@@ -31,15 +31,15 @@ int main(void)
 	setPinDirection(DIO_PORTC,PIN2,OUTPUT);
 	setPinDirection(DIO_PORTC,PIN7,OUTPUT);
 	uint8 pinStatus=2;
-	setPinDirection(DIO_PORTD,PIN2,INPUT);
+	setPinDirection(DIO_PORTB,PIN0,INPUT);
 
 	 while(1)
 	 {
 
-		 DIO_uint8_GetPinValue(DIO_PORTD,PIN2,&pinStatus);
-		 _delay_ms(50);
+		 //DIO_uint8_GetPinValue(DIO_PORTD,PIN2,&pinStatus);
 
-		 if(pinStatus==1)
+
+		 if(pinStatus==2)
 		 {
 			setPinVAlue(DIO_PORTD,PIN3,OUTPUT_HIGH);
 			setPinVAlue(DIO_PORTC,PIN2,OUTPUT_HIGH);

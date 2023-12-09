@@ -236,63 +236,30 @@ uint8 DIO_uint8_SetPortValue  (uint8 Copy_uint8_Port ,   uint8 Copy_uint8_Value 
 uint8 DIO_uint8_GetPinValue (uint8 Copy_uint8_Port , uint8 Copy_uint8_Pin , uint8* Copy_uint8_Value)
 {
 	uint8 local_ErrorStatus=0;
-	if(Copy_uint8_Value!=NULL &&Copy_uint8_Pin <=7 )
+	switch(Copy_uint8_Port)
 	{
+		case DIO_PORTA:
+			*Copy_uint8_Value = GETBIT(PINA , Copy_uint8_Pin);
+			break;
+		case DIO_PORTB:
+			*Copy_uint8_Value = GETBIT(PINB , Copy_uint8_Pin);
+			break;
+		case DIO_PORTC:
+			*Copy_uint8_Value = GETBIT(PINC , Copy_uint8_Pin);
+			break;
+		case DIO_PORTD:
+			*Copy_uint8_Value = GETBIT(PIND , Copy_uint8_Pin);
+			break;
 
-		switch(Copy_uint8_Port)
-		{
-			case DIO_PORTA:
-				*Copy_uint8_Value = GETBIT(PINA , Copy_uint8_Pin);
-				break;
-			case DIO_PORTB:
-				*Copy_uint8_Value = GETBIT(PINB , Copy_uint8_Pin);
-				break;
-			case DIO_PORTC:
-				*Copy_uint8_Value = GETBIT(PINC , Copy_uint8_Pin);
-				break;
-			case DIO_PORTD:
-				*Copy_uint8_Value = GETBIT(PIND , Copy_uint8_Pin);
-				break;
-			default:
-				local_ErrorStatus=1;
-				break;
-		}
 	}
-	else
-	{
-		local_ErrorStatus=1;
-	}
-	return local_ErrorStatus;
-}
 
-uint8 DIO_setInternalPullUp(uint8  Copy_Port ,  uint8 Copy_Pin)
-{
-	uint8 local_ErrorStatus=0;
-	if (Copy_Pin <= 7)
-	{
-			switch(Copy_Port)
-			{
-				case DIO_PORTA:
-					CLEARBIT(DDRA, Copy_Pin);
-					SETBIT(PORTA, Copy_Pin);
-					break;
-				case DIO_PORTB:
-					CLEARBIT(DDRB,Copy_Pin);
-					SETBIT(PORTB, Copy_Pin);
-					break;
-				case DIO_PORTC:
-					CLEARBIT(DDRC,Copy_Pin);
-					SETBIT(PORTC, Copy_Pin);
-						break;
-				case DIO_PORTD:
-					CLEARBIT(DDRD,Copy_Pin);
-					SETBIT(PORTD, Copy_Pin);
-					break;
-				default:
-					local_ErrorStatus=1;
-					break;
-			}
-	}
+
+
+
+
+
+
+
 
 	return local_ErrorStatus;
 }

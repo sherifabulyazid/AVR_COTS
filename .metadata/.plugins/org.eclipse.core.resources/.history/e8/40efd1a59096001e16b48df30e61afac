@@ -39,8 +39,6 @@
 #define PORT_INPUT  0x00
 #define PORT_OUTPUT 0xff
 
-#include <util/delay.h>
-
 uint8  setPinDirection(uint8  Copy_Port ,  uint8 Copy_pin ,  uint8 Copy_Direction);
 
 uint8 setPinVAlue(uint8  Copy_Port ,  uint8 Copy_Pin ,  uint8 Copy_Status);

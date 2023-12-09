@@ -37,7 +37,7 @@ int main(void)
 	 {
 
 		 DIO_uint8_GetPinValue(DIO_PORTD,PIN2,&pinStatus);
-		 _delay_ms(50);
+
 
 		 if(pinStatus==1)
 		 {

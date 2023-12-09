@@ -36,11 +36,6 @@
 #define OUTPUT_HIGH  1
 #define OUTPUT_LOW   0
 
-#define PORT_INPUT  0x00
-#define PORT_OUTPUT 0xff
-
-#include <util/delay.h>
-
 uint8  setPinDirection(uint8  Copy_Port ,  uint8 Copy_pin ,  uint8 Copy_Direction);
 
 uint8 setPinVAlue(uint8  Copy_Port ,  uint8 Copy_Pin ,  uint8 Copy_Status);
@@ -50,7 +45,6 @@ uint8 DIO_uint8_SetPortDirection (uint8 Copy_uint8_Port, uint8 Copy_uint8_Direct
 uint8 DIO_uint8_SetPortValue  (uint8 Copy_uint8_Port ,   uint8 Copy_uint8_Value );
 
 uint8 DIO_uint8_GetPinValue (uint8 Copy_uint8_Port , uint8 Copy_uint8_Pin , uint8* Copy_uint8_Value);
-uint8 DIO_setInternalPullUp(uint8  Copy_Port ,  uint8 Copy_Pin);
 
 
 #endif
