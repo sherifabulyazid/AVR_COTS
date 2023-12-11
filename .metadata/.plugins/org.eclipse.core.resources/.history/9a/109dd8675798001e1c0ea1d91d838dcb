@@ -3,7 +3,7 @@
  * main.c
  *
  *  Created on: Dec 8, 2023
- *  Author: Sherif Abuelyazid
+ *      Author: Sherif Abuelyazid
  */
 
 #include "STD.h"
@@ -17,6 +17,7 @@
 int main(void)
 {
 	/*
+
 	 setPinDirection(DIO_PORTD,PIN3,OUTPUT);
 	setPinDirection(DIO_PORTC,PIN2,OUTPUT);
 	setPinDirection(DIO_PORTC,PIN7,OUTPUT);
@@ -26,7 +27,6 @@ int main(void)
 	setPinVAlue(DIO_PORTC,PIN7,OUTPUT_HIGH);
 	DIO_uint8_SetPortDirection(DIO_PORTC,OUTPUT);
 */
-/* Code to turn on 3 LEDs if pushbutton is pressed
 	setPinDirection(DIO_PORTD,PIN3,OUTPUT);
 	setPinDirection(DIO_PORTC,PIN2,OUTPUT);
 	setPinDirection(DIO_PORTC,PIN7,OUTPUT);
@@ -59,7 +59,6 @@ int main(void)
 
 
 	 }
-	 */
 	return 0;
 }
 

@@ -36,11 +36,9 @@
 #define OUTPUT_HIGH  1
 #define OUTPUT_LOW   0
 
+#define PORT_INPUT  0x00
 #define PORT_OUTPUT 0xff
-#define PORT_INPUT  0
 
-#define PORT_HIGH 0xff
-#define PORT_LOW  0
 #include <util/delay.h>
 
 uint8  setPinDirection(uint8  Copy_Port ,  uint8 Copy_pin ,  uint8 Copy_Direction);
