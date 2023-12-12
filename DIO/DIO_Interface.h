@@ -12,10 +12,14 @@
 4-set port value
 5- get pin value
 */
+
 #ifndef _DIO_REGISTER_H_
 #define _DIO_REGISTER_H_
 
-/*Mactos for ports */
+#include <util/delay.h>
+
+/*Macros for ports */
+
 #define DIO_PORTA  0
 #define DIO_PORTB  1
 #define DIO_PORTC  2
@@ -41,17 +45,16 @@
 
 #define PORT_HIGH 0xff
 #define PORT_LOW  0
-#include <util/delay.h>
 
 uint8  setPinDirection(uint8  Copy_Port ,  uint8 Copy_pin ,  uint8 Copy_Direction);
 
 uint8 setPinVAlue(uint8  Copy_Port ,  uint8 Copy_Pin ,  uint8 Copy_Status);
 
-uint8 DIO_uint8_SetPortDirection (uint8 Copy_uint8_Port, uint8 Copy_uint8_Direction );
+uint8 DIO_SetPortDirection (uint8 Copy_Port, uint8 Copy_Direction );
 
-uint8 DIO_uint8_SetPortValue  (uint8 Copy_uint8_Port ,   uint8 Copy_uint8_Value );
+uint8 DIO_SetPortValue  (uint8 Copy_Port ,   uint8 Copy_Value );
 
-uint8 DIO_uint8_GetPinValue (uint8 Copy_uint8_Port , uint8 Copy_uint8_Pin , uint8* Copy_uint8_Value);
+uint8 DIO_GetPinValue (uint8 Copy_Port , uint8 Copy_Pin , uint8* Copy_Value);
 uint8 DIO_setInternalPullUp(uint8  Copy_Port ,  uint8 Copy_Pin);
 
 

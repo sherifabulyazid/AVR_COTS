@@ -124,7 +124,7 @@ uint8 setPinVAlue(uint8  Copy_Port ,  uint8 Copy_Pin ,  uint8 Copy_Status)
 	return local_ErrorStatus;
 }
 
-uint8 DIO_uint8_SetPortDirection (uint8 Copy_Port, uint8 Copy_Direction )
+uint8 DIO_SetPortDirection (uint8 Copy_Port, uint8 Copy_Direction )
 {
 	uint8 local_ErrorStatus=0;
 		switch(Copy_Port)
@@ -150,7 +150,7 @@ uint8 DIO_uint8_SetPortDirection (uint8 Copy_Port, uint8 Copy_Direction )
 }
 
 
-uint8 DIO_uint8_SetPortValue  (uint8 Copy_Port ,   uint8 Copy_Value )
+uint8 DIO_SetPortValue  (uint8 Copy_Port ,   uint8 Copy_Value )
 
 {
 	uint8 local_ErrorStatus=0;
@@ -177,7 +177,7 @@ uint8 DIO_uint8_SetPortValue  (uint8 Copy_Port ,   uint8 Copy_Value )
 	return local_ErrorStatus;
 }
 
-uint8 DIO_uint8_GetPinValue (uint8 Copy_uint8_Port , uint8 Copy_uint8_Pin , uint8* Copy_uint8_Value)
+uint8 DIO_GetPinValue (uint8 Copy_uint8_Port , uint8 Copy_uint8_Pin , uint8* Copy_uint8_Value)
 {
 	uint8 local_ErrorStatus=0;
 	if(Copy_uint8_Value!=NULL &&Copy_uint8_Pin <=7 )
