@@ -5,14 +5,17 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../DIO_Program.c \
+../LCD_Program.c \
 ../main.c 
 
 OBJS += \
 ./DIO_Program.o \
+./LCD_Program.o \
 ./main.o 
 
 C_DEPS += \
 ./DIO_Program.d \
+./LCD_Program.d \
 ./main.d 
 
 
