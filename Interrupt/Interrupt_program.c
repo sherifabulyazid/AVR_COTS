@@ -11,6 +11,31 @@
 #include "BIT_MATH.h"
 #include "STD.h"
 
+void (*INTptr0)(void)=NULL;//global pointer to store the address of ISR function in App layer
+void (*INTptr1)(void)=NULL;//global pointer to store the address of ISR function in App layer
+
+void ISR_CallBack_INT0( void (*copy_INT_ptr)(void) )
+{
+	if(copy_INT_ptr != NULL)
+	INTptr0=copy_INT_ptr;
+}
+
+ISR(VECT_INT0)
+{
+	if(INTptr0 !=NULL)
+		INTptr0();
+}
+void ISR_CallBack_INT1( void (*copy_INT_ptr)(void) )
+{
+	if(copy_INT_ptr != NULL)
+	INTptr1=copy_INT_ptr;
+}
+ISR(VECT_INT1)
+{
+	if(INTptr1 !=NULL)
+		INTptr1();
+}
+
 
 void INT_Set_GIE (void)
 {

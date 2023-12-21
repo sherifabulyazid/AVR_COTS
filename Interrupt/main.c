@@ -21,14 +21,17 @@ void blinking(void)
 			setPinVAlue(DIO_PORTC, PIN7,OUTPUT_LOW);
 			_delay_ms(100);
 }
+/*
 void __vector_1(void)__attribute__((signal));
 void __vector_1(void)
 {
 		blinking();
 }
+*/
 
 int main (void)
 {
+	ISR_CallBack_INT0(blinking);
 	INT_Set_GIE ();
 	INT_Sense_Level(INT0);
 	INT_PIE(INT0);
