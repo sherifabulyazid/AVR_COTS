@@ -21,7 +21,7 @@ int main (void)
 		DIO_SetPortDirection(DIO_PORTB, PORT_OUTPUT); //for RS,RW,EN
 		LCD_init();
 		_delay_ms(25);
-		LCD_Write_data('M');
+		//LCD_Write_data('M');
 		DIO_SetPortDirection(KEYPAD_PORT, KEYPAD_Direction);
 		DIO_SetPortValue(KEYPAD_PORT,KEYPAD_Value);
 
@@ -31,7 +31,6 @@ int main (void)
 			{
 				val = get_button_pressed();
 			}while(val == 0xff);
-
 			LCD_Write_data(val);
 
 		}

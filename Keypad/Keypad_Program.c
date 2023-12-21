@@ -36,7 +36,7 @@ uint8 get_button_pressed(void)
 					DIO_GetPinValue(KEYPAD_PORT,row,&buttonStatus);
 				}
 				setPinVAlue(KEYPAD_PORT,column,OUTPUT_HIGH);
-				buttonPressed= buttonArray[row][column];
+				buttonPressed= buttonArray[row][column-4];
 				return buttonPressed;
 			}
 		}
