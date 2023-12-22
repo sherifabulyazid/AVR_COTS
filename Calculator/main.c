@@ -5,7 +5,6 @@
  *      Author: Sherif
  */
 
-
 #include "BIT_MATH.h"
 #include "Keypad_Interface.h"
 #include "DIO_Interface.h"
@@ -15,6 +14,7 @@
 #include "STD.h"
 
 uint8 val = 0xff;
+
 int main (void)
 {
 		DIO_SetPortDirection(DIO_PORTA, PORT_OUTPUT); //for LCD data pins

@@ -33,8 +33,8 @@ int main (void)
 {
 	ISR_CallBack_INT0(blinking);
 	INT_Set_GIE ();
-	INT_Sense_Level(INT0);
-	INT_PIE(INT0);
+	EXINT_Sense_Level(INT0);
+	EXINT_PIE(INT0);
 	setPinDirection(DIO_PORTC, PIN2,OUTPUT); //LED0
 	setPinDirection(DIO_PORTC, PIN7,OUTPUT); //LED1
 	setPinDirection(DIO_PORTC, PIN6,OUTPUT); //LED2 for protus
