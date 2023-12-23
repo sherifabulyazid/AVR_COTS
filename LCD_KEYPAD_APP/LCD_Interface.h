@@ -23,4 +23,5 @@ void LCD_GoToXY(uint8 copy_xPosition, uint8 copy_yPosition);
 void LCD_SendString(const char *copy_string);
 void LCD_ClearDisplay(void);
 
+
 #endif /* LCD_INTERFACE_H_ */

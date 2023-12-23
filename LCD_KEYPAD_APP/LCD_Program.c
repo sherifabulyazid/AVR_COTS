@@ -132,8 +132,16 @@ void LCD_SendString(const char *copy_string)
 	uint8 local_iterator=0;
 	while(copy_string[local_iterator]!='\0')
 	{
-		LCD_Write_data(copy_string[local_iterator]);
-		local_iterator++;
+		if(local_iterator<16)
+		{
+			LCD_Write_data(copy_string[local_iterator]);
+			local_iterator++;
+		}
+		else{
+			LCD_GoToXY(SecondLine,local_iterator-16);
+			LCD_Write_data(copy_string[local_iterator]);
+			local_iterator++;
+		}
 	}
 }
 void LCD_ClearDisplay(void)
@@ -141,3 +149,4 @@ void LCD_ClearDisplay(void)
 	LCD_cmd(0x01);// Display clear
 
 }
+

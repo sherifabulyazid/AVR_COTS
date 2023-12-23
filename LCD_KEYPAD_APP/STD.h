@@ -6,7 +6,7 @@
 #define CPU_TYPE_16 16
 #define CPU_TYPE_8 8
 
-//#define NULL ((void*)0)
+#define NULL ((void*)0)
 
 #define CPU_TYPE CPU_TYPE_32
 
