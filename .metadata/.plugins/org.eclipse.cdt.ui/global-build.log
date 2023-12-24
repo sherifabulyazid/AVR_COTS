@@ -1,4 +1,1283 @@
-03:13:03 **** Incremental Build of configuration Debug for project LCD ****
+01:13:13 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../DIO_Interface.h:19,
+                 from ../main.c:4:
+f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+'Finished building: ../main.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8804 bytes (26.9% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+01:16:08 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../DIO_Interface.h:19,
+                 from ../main.c:4:
+f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+'Finished building: ../main.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8804 bytes (26.9% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+01:16:50 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../DIO_Interface.h:19,
+                 from ../main.c:4:
+f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+'Finished building: ../main.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8804 bytes (26.9% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+01:31:38 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../DIO_Interface.h:19,
+                 from ../main.c:4:
+f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+'Finished building: ../main.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8784 bytes (26.8% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+01:34:25 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../DIO_Interface.h:19,
+                 from ../main.c:4:
+f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:20: warning: unused variable 'analogue'
+'Finished building: ../main.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8680 bytes (26.5% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+01:35:35 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../DIO_Interface.h:19,
+                 from ../main.c:4:
+f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:20: warning: unused variable 'analogue'
+'Finished building: ../main.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8620 bytes (26.3% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+01:42:35 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../DIO_Interface.h:19,
+                 from ../main.c:4:
+f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+'Finished building: ../main.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8804 bytes (26.9% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+01:44:05 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../DIO_Interface.h:19,
+                 from ../main.c:4:
+f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+'Finished building: ../main.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8804 bytes (26.9% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+01:44:50 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../DIO_Interface.h:19,
+                 from ../main.c:4:
+f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+'Finished building: ../main.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8784 bytes (26.8% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+01:47:16 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8784 bytes (26.8% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+01:50:48 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../DIO_Interface.h:19,
+                 from ../main.c:4:
+f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+'Finished building: ../main.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8788 bytes (26.8% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+01:51:48 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../DIO_Interface.h:19,
+                 from ../main.c:4:
+f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+'Finished building: ../main.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8776 bytes (26.8% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+01:52:43 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../DIO_Interface.h:19,
+                 from ../main.c:4:
+f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+'Finished building: ../main.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8780 bytes (26.8% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+01:53:00 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../DIO_Interface.h:19,
+                 from ../main.c:4:
+f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+'Finished building: ../main.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8776 bytes (26.8% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+01:53:05 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8776 bytes (26.8% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+01:54:35 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../DIO_Interface.h:19,
+                 from ../main.c:4:
+f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+'Finished building: ../main.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8786 bytes (26.8% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+01:56:16 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../DIO_Interface.h:19,
+                 from ../main.c:4:
+f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+'Finished building: ../main.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8776 bytes (26.8% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+01:57:04 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../DIO_Interface.h:19,
+                 from ../main.c:4:
+f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+'Finished building: ../main.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8776 bytes (26.8% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+01:57:31 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../DIO_Interface.h:19,
+                 from ../main.c:4:
+f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+'Finished building: ../main.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8776 bytes (26.8% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+01:57:40 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8776 bytes (26.8% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+01:57:44 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../DIO_Interface.h:19,
+                 from ../main.c:4:
+f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+'Finished building: ../main.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8776 bytes (26.8% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+01:59:45 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../DIO_Interface.h:19,
+                 from ../main.c:4:
+f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+'Finished building: ../main.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8776 bytes (26.8% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+23:04:15 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../ADC_prog.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"ADC_prog.d" -MT"ADC_prog.o" -c -o "ADC_prog.o" "../ADC_prog.c"
+../ADC_prog.c: In function 'ADC_init':
+../ADC_prog.c:41: warning: implicit declaration of function 'CLS_BIT'
+'Finished building: ../ADC_prog.c'
+' '
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../DIO_Interface.h:19,
+                 from ../main.c:4:
+f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+'Finished building: ../main.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+./ADC_prog.o: In function `ADC_init':
+../ADC_prog.c:41: undefined reference to `CLS_BIT'
+../ADC_prog.c:42: undefined reference to `CLS_BIT'
+../ADC_prog.c:43: undefined reference to `CLS_BIT'
+make: *** [ADCC.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+23:04:42 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../ADC_prog.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"ADC_prog.d" -MT"ADC_prog.o" -c -o "ADC_prog.o" "../ADC_prog.c"
+'Finished building: ../ADC_prog.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9164 bytes (28.0% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+23:07:04 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../DIO_Interface.h:19,
+                 from ../main.c:4:
+f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+'Finished building: ../main.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9168 bytes (28.0% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+23:09:08 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../ADC_prog.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"ADC_prog.d" -MT"ADC_prog.o" -c -o "ADC_prog.o" "../ADC_prog.c"
+'Finished building: ../ADC_prog.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9168 bytes (28.0% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+23:11:17 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../ADC_prog.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"ADC_prog.d" -MT"ADC_prog.o" -c -o "ADC_prog.o" "../ADC_prog.c"
+'Finished building: ../ADC_prog.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9168 bytes (28.0% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+23:23:51 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../ADC_prog.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"ADC_prog.d" -MT"ADC_prog.o" -c -o "ADC_prog.o" "../ADC_prog.c"
+'Finished building: ../ADC_prog.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9168 bytes (28.0% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+23:26:18 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../DIO_Interface.h:19,
+                 from ../main.c:4:
+f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+'Finished building: ../main.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9522 bytes (29.1% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+23:31:00 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../DIO_Interface.h:19,
+                 from ../main.c:4:
+f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+'Finished building: ../main.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9530 bytes (29.1% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+23:39:42 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../DIO_Interface.h:19,
+                 from ../main.c:4:
+f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+'Finished building: ../main.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9522 bytes (29.1% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+23:40:37 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../DIO_Interface.h:19,
+                 from ../main.c:4:
+f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+'Finished building: ../main.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9522 bytes (29.1% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+23:43:21 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../ADC_prog.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"ADC_prog.d" -MT"ADC_prog.o" -c -o "ADC_prog.o" "../ADC_prog.c"
+'Finished building: ../ADC_prog.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9522 bytes (29.1% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+23:44:13 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../ADC_prog.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"ADC_prog.d" -MT"ADC_prog.o" -c -o "ADC_prog.o" "../ADC_prog.c"
+'Finished building: ../ADC_prog.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9522 bytes (29.1% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+23:45:51 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../DIO_Interface.h:19,
+                 from ../main.c:4:
+f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+'Finished building: ../main.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9524 bytes (29.1% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+23:48:35 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../DIO_Interface.h:19,
+                 from ../main.c:4:
+f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+'Finished building: ../main.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9522 bytes (29.1% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+00:01:11 **** Incremental Build of configuration Debug for project ADCC ****
 make all 
 'Building file: ../LCD_Program.c'
 'Invoking: AVR Compiler'
@@ -11,33 +1290,86 @@ f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: war
 'Invoking: AVR Compiler'
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
 In file included from ../DIO_Interface.h:19,
-                 from ../main.c:12:
+                 from ../main.c:4:
+f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:33: warning: implicit declaration of function 'LCD_WriteNumber'
+'Finished building: ../main.c'
+' '
+'Building target: ADCC.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+./main.o: In function `main':
+../main.c:33: undefined reference to `LCD_WriteNumber'
+make: *** [ADCC.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+00:01:35 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../DIO_Interface.h:19,
+                 from ../main.c:4:
 f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
 'Finished building: ../main.c'
 ' '
-'Building target: LCD.elf'
+'Building target: ADCC.elf'
 'Invoking: AVR C Linker'
-avr-gcc -Wl,-Map,LCD.map -mmcu=atmega32 -o "LCD.elf"  ./DIO_Program.o ./LCD_Program.o ./main.o   
-'Finished building target: LCD.elf'
+avr-gcc -Wl,-Map,ADCC.map -mmcu=atmega32 -o "ADCC.elf"  ./ADC_prog.o ./DIO_Program.o ./LCD_Program.o ./main.o   
+'Finished building target: ADCC.elf'
 ' '
 'Invoking: AVR Create Extended Listing'
-avr-objdump -h -S LCD.elf  >"LCD.lss"
-'Finished building: LCD.lss'
+avr-objdump -h -S ADCC.elf  >"ADCC.lss"
+'Finished building: ADCC.lss'
 ' '
 'Create Flash image (ihex format)'
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex LCD.elf  "LCD.hex"
-'Finished building: LCD.hex'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADCC.elf  "ADCC.hex"
+'Finished building: ADCC.hex'
 ' '
 'Invoking: Print Size'
-avr-size --format=avr --mcu=atmega32 LCD.elf
+avr-size --format=avr --mcu=atmega32 ADCC.elf
 AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:   16036 bytes (48.9% Full)
+Program:    9292 bytes (28.4% Full)
 (.text + .data + .bootloader)
 
-Data:          8 bytes (0.4% Full)
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+00:04:47 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9292 bytes (28.4% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+00:04:50 **** Incremental Build of configuration Debug for project ADCC ****
+make all 
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega32 ADCC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9292 bytes (28.4% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
 (.data + .bss + .noinit)
 
 

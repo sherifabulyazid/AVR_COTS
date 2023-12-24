@@ -9,8 +9,8 @@
 #define PORT_CONFIG_H_
 
 /* PORT A Direction */
-#define DDRA_PIN0 0
-#define DDRA_PIN1 0
+#define DDRA_PIN0 1
+#define DDRA_PIN1 1
 #define DDRA_PIN2 0
 #define DDRA_PIN3 0
 #define DDRA_PIN4 0

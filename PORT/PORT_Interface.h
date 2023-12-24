@@ -10,7 +10,7 @@
 
 void Port_void_voidInit(void);
 
-#define CONC_HELPER(p7,p6,p5,p4,p3,p2,p1,p0) p7##p6##p5##p4##p3##p2##p1##p0
+#define CONC_HELPER(p7,p6,p5,p4,p3,p2,p1,p0) 0b##p7##p6##p5##p4##p3##p2##p1##p0
 #define CONC(p7,p6,p5,p4,p3,p2,p1,p0) CONC_HELPER(p7,p6,p5,p4,p3,p2,p1,p0)
 
 #endif /* PORT_INTERFACE_H_ */
