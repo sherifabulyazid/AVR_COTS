@@ -22,5 +22,7 @@ void LCD_Write_data(uint8 data);
 void LCD_GoToXY(uint8 copy_xPosition, uint8 copy_yPosition);
 void LCD_SendString(const char *copy_string);
 void LCD_ClearDisplay(void);
+void LCD_uint8_WriteNumber(uint8 copy_number);
+
 
 #endif /* LCD_INTERFACE_H_ */

@@ -130,14 +130,44 @@ void LCD_GoToXY(uint8 copy_xPosition, uint8 copy_yPosition)
 void LCD_SendString(const char *copy_string)
 {
 	uint8 local_iterator=0;
-	while(copy_string[local_iterator]!='\0')
-	{
-		LCD_Write_data(copy_string[local_iterator]);
-		local_iterator++;
-	}
+		while(copy_string[local_iterator]!='\0')
+		{
+			if(local_iterator<16)
+			{
+				LCD_Write_data(copy_string[local_iterator]);
+				local_iterator++;
+			}
+			else{
+				LCD_GoToXY(SecondLine,local_iterator-16);
+				LCD_Write_data(copy_string[local_iterator]);
+				local_iterator++;
+			}
+		}
 }
 void LCD_ClearDisplay(void)
 {
 	LCD_cmd(0x01);// Display clear
 
+}
+void LCD_uint8_WriteNumber(uint8 copy_number)
+{
+	if(copy_number<10)
+	{
+		LCD_Write_data(copy_number+'0');
+		_delay_ms(1000);
+	}
+	else if(copy_number<100)
+	{
+		LCD_Write_data(copy_number/10+'0');
+		LCD_Write_data(copy_number%10+'0');
+		_delay_ms(1000);
+	}
+	else if (copy_number<1000)
+	{
+		LCD_Write_data(copy_number/100+'0');
+		LCD_Write_data((copy_number%100)/10+'0');
+		LCD_Write_data(copy_number%10+'0');
+		_delay_ms(1000);
+	}
+	else{}
 }
