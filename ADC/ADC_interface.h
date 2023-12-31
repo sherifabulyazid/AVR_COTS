@@ -50,7 +50,11 @@
 void ADC_init(void);
 
 
-uint8 ADC_StartConversion(uint8 copy_channel);
+uint8 ADC_StartConversion(uint8 copy_channel); //synchronous conversion
+uint8 ADC_uint8_StartConversionSynch(uint8 copy_uint8_channel, uint8* copy_puint8_reading);
+
+uint8 ADC_uint8_StartConversionAsynch(uint8 copy_uint8_channel, uint8* copy_puint8_reading, void (*copy_pv_NotificationFunction)(void));
+
 
 
 

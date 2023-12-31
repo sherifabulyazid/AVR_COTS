@@ -36,5 +36,8 @@
 #define ADCL     (*(volatile uint8 *)0x24)
 #define ADCH     (*(volatile uint8 *)0x25)
 
-
+#define SFIOR				*((volatile uint8*)0x50)	/*special function IO register		 */
+#define SFIOR_ADTS_2		7
+#define SFIOR_ADTS_1		6
+#define SFIOR_ADTS_0		5
 #endif /* ADC_REGISTERS_H_ */

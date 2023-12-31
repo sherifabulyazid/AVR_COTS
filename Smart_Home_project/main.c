@@ -6,12 +6,13 @@
 #include "LCD_Interface.h"
 #include "Keypad_Interface.h"
 #include "Keypad_config.h"
+#include "Timer_interface.h"
+
 static uint8 ComparePasswords(uint8 *pass1 , uint8 *pass2 );
 
 
 int main (void)
 {
-	//DIO_SetPortDirection(DIO_PORTD,PORT_OUTPUT);
 	DIO_SetPortDirection(DIO_PORTB,PORT_OUTPUT);//LCD data
 	setPinDirection(DIO_PORTA,PIN5,OUTPUT);// LCD EN
 	setPinDirection(DIO_PORTA,PIN6,OUTPUT); // LCD R/W
@@ -19,7 +20,8 @@ int main (void)
 	DIO_SetPortDirection(DIO_PORTC, KEYPAD_Direction);
 	DIO_SetPortValue(DIO_PORTC,KEYPAD_Value);
 	setPinDirection(DIO_PORTD,PIN7,OUTPUT);//Lights
-	setPinDirection(DIO_PORTD,PIN5,OUTPUT);//Fan
+	setPinDirection(DIO_PORTD,PIN4,OUTPUT);//Fan
+	setPinDirection(DIO_PORTD,PIN5,OUTPUT);//Servo motor
 	ADC_init();
 	LCD_init();
 	uint8 valueADC=0;
@@ -31,6 +33,8 @@ int main (void)
 	uint8 iterator=0;
 	uint8 choosenOption =0;
 	uint8 trials=0;
+	uint8 angle=0;
+
 	LCD_SendString("Welcome To SMART HOME");
 	_delay_ms(1500);
 	LCD_ClearDisplay();
@@ -51,8 +55,22 @@ int main (void)
 	LCD_ClearDisplay();
 	_delay_ms(2);
 
+	/*control servo motor using potentiometer*/
+	uint32 it=40000;
+	LCD_SendString("Adjust Servo");
+	_delay_ms(1000);
+	LCD_ClearDisplay();
+	while(it)
+	{
+		valueADC=ADC_StartConversion(ADC0);
+		angle=ADC_To_Angle(valueADC);
+		Timer1_Servo(angle);
+		it--;
+	}
+
 	while(1)
 	{
+
 		passStatus = ComparePasswords(passReal,passArr);
 		if(passStatus==FALSE)
 		{
@@ -123,10 +141,10 @@ int main (void)
 					_delay_ms(2);
 					break;
 				case '2':
-					setPinVAlue(DIO_PORTD,PIN5,OUTPUT_HIGH);
+					setPinVAlue(DIO_PORTD,PIN4,OUTPUT_HIGH);
 					break;
 				case '3':
-					setPinVAlue(DIO_PORTD,PIN5,OUTPUT_LOW);
+					setPinVAlue(DIO_PORTD,PIN4,OUTPUT_LOW);
 					break;
 				case '4':
 					setPinVAlue(DIO_PORTD,PIN7,OUTPUT_HIGH);

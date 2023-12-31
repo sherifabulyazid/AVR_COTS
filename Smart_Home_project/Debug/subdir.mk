@@ -8,6 +8,7 @@ C_SRCS += \
 ../DIO_Program.c \
 ../Keypad_Program.c \
 ../LCD_Program.c \
+../Timer_Prog.c \
 ../main.c 
 
 OBJS += \
@@ -15,6 +16,7 @@ OBJS += \
 ./DIO_Program.o \
 ./Keypad_Program.o \
 ./LCD_Program.o \
+./Timer_Prog.o \
 ./main.o 
 
 C_DEPS += \
@@ -22,6 +24,7 @@ C_DEPS += \
 ./DIO_Program.d \
 ./Keypad_Program.d \
 ./LCD_Program.d \
+./Timer_Prog.d \
 ./main.d 
 
 
