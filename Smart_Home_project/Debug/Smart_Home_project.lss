@@ -11,25 +11,25 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
   3 .stab         00003684  00000000  00000000  00004c2c  2**2
                   CONTENTS, READONLY, DEBUGGING
-  4 .stabstr      00001074  00000000  00000000  000082b0  2**0
+  4 .stabstr      0000107f  00000000  00000000  000082b0  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_aranges 000001a0  00000000  00000000  00009324  2**0
+  5 .debug_aranges 000001a0  00000000  00000000  0000932f  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_pubnames 000001f2  00000000  00000000  000094c4  2**0
+  6 .debug_pubnames 000001f2  00000000  00000000  000094cf  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_info   0000240b  00000000  00000000  000096b6  2**0
+  7 .debug_info   0000240b  00000000  00000000  000096c1  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_abbrev 00001386  00000000  00000000  0000bac1  2**0
+  8 .debug_abbrev 00001386  00000000  00000000  0000bacc  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_line   000011d6  00000000  00000000  0000ce47  2**0
+  9 .debug_line   000011d6  00000000  00000000  0000ce52  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_frame  000001c0  00000000  00000000  0000e020  2**2
+ 10 .debug_frame  000001c0  00000000  00000000  0000e028  2**2
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_str    000002f6  00000000  00000000  0000e1e0  2**0
+ 11 .debug_str    000002f6  00000000  00000000  0000e1e8  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_loc    0000096e  00000000  00000000  0000e4d6  2**0
+ 12 .debug_loc    0000096e  00000000  00000000  0000e4de  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_ranges 00000050  00000000  00000000  0000ee44  2**0
+ 13 .debug_ranges 00000050  00000000  00000000  0000ee4c  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -7853,7 +7853,7 @@ _delay_ms(double __ms)
 	_delay_ms(2);
 
 	/*control servo motor using potentiometer*/
-	uint32 it=40000;
+	uint32 iterator_time=40000;
     34c6:	fe 01       	movw	r30, r28
     34c8:	e1 51       	subi	r30, 0x11	; 17
     34ca:	ff 4f       	sbci	r31, 0xFF	; 255
@@ -8075,7 +8075,7 @@ _delay_ms(double __ms)
 	LCD_ClearDisplay();
     364a:	0e 94 73 11 	call	0x22e6	; 0x22e6 <LCD_ClearDisplay>
     364e:	29 c0       	rjmp	.+82     	; 0x36a2 <main+0x8de>
-	while(it)
+	while(iterator_time)
 	{
 		valueADC=ADC_StartConversion(ADC0);
     3650:	80 e0       	ldi	r24, 0x00	; 0
@@ -8100,7 +8100,7 @@ _delay_ms(double __ms)
     3676:	ff 4f       	sbci	r31, 0xFF	; 255
     3678:	80 81       	ld	r24, Z
     367a:	0e 94 64 16 	call	0x2cc8	; 0x2cc8 <Timer1_Servo>
-		it--;
+		iterator_time--;
     367e:	9e 01       	movw	r18, r28
     3680:	21 51       	subi	r18, 0x11	; 17
     3682:	3f 4f       	sbci	r19, 0xFF	; 255
@@ -8120,11 +8120,11 @@ _delay_ms(double __ms)
     369e:	a2 83       	std	Z+2, r26	; 0x02
     36a0:	b3 83       	std	Z+3, r27	; 0x03
 	/*control servo motor using potentiometer*/
-	uint32 it=40000;
+	uint32 iterator_time=40000;
 	LCD_SendString("Adjust Servo");
 	_delay_ms(1000);
 	LCD_ClearDisplay();
-	while(it)
+	while(iterator_time)
     36a2:	fe 01       	movw	r30, r28
     36a4:	e1 51       	subi	r30, 0x11	; 17
     36a6:	ff 4f       	sbci	r31, 0xFF	; 255

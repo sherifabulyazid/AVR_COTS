@@ -232,10 +232,11 @@ void Timer1_Servo(uint8 copy_Angle)
 	CLEARBIT(TCCR1A,0);
 	SETBIT(TCCR1B,3);
 	SETBIT(TCCR1B,4);
-	TCCR1B|=0x02; //prescaler 8
-	ICR1L=40000; //max count value
+	TCCR1B|=0x02; //Prescaler 8
+	ICR1L=40000;  //max count value
 	OCR1AL=2000+(copy_Angle)*(2000/180);//output compare
 }
+
 uint8 ADC_To_Angle(uint8 copy_ADC_val)
 {
 	uint8 Angle =0;

@@ -1,5 +1,5 @@
 /**********************************************************
-*Author: Mahmoud Khaled Alnmr
+*Author: Sherif
 *SWC:
 *Layer:
 *Version:
@@ -23,7 +23,7 @@ static uint8 ADC_uint8_ADCISRSource = STD_LOW;
 
 void ADC_init(void)
 {
-	/*choosind the reference voltage*/
+	/*choosing the reference voltage*/
 #if VOLTAGR_REF == AREF
 	CLR_BIT(ADMUX, REFS1);
 	CLR_BIT(ADMUX, REFS0);
@@ -146,8 +146,6 @@ uint8 ADC_uint8_StartConversionSynch(uint8 copy_uint8_channel, uint8* copy_puint
 			ADC_uint8_BusyState = ADC_NOTBUSY;
 
 		}
-
-
 	}
 	else
 	{

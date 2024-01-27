@@ -1,14 +1,11 @@
 /**********************************************************
-*Author: Mahmoud Khaled Alnmr
+*Author: Sherif
 *SWC:
 *Layer:
 *Version:
 ***********************************************************/
 #ifndef ADC_REGISTERS_H_
 #define ADC_REGISTERS_H_
-
-
-
 
 #define ADMUX    (*(volatile uint8 *)0x27) 	/*ADC multiplexer selection register*/
 

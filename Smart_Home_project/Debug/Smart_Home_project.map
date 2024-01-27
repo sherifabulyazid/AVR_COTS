@@ -573,9 +573,9 @@ LOAD f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  .stab          0x00002490     0x11f4 ./main.o
                                0x13f8 (size before relaxing)
 
-.stabstr        0x00000000     0x1074
+.stabstr        0x00000000     0x107f
  *(.stabstr)
- .stabstr       0x00000000     0x1074 ./ADC_prog.o
+ .stabstr       0x00000000     0x107f ./ADC_prog.o
 
 .stab.excl
  *(.stab.excl)

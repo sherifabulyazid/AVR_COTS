@@ -10,7 +10,6 @@
 
 static uint8 ComparePasswords(uint8 *pass1 , uint8 *pass2 );
 
-
 int main (void)
 {
 	DIO_SetPortDirection(DIO_PORTB,PORT_OUTPUT);//LCD data
@@ -56,16 +55,16 @@ int main (void)
 	_delay_ms(2);
 
 	/*control servo motor using potentiometer*/
-	uint32 it=40000;
+	uint32 iterator_time=40000;
 	LCD_SendString("Adjust Servo");
 	_delay_ms(1000);
 	LCD_ClearDisplay();
-	while(it)
+	while(iterator_time)
 	{
 		valueADC=ADC_StartConversion(ADC0);
 		angle=ADC_To_Angle(valueADC);
 		Timer1_Servo(angle);
-		it--;
+		iterator_time--;
 	}
 
 	while(1)

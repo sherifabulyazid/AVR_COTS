@@ -56,6 +56,6 @@ uint8 DIO_SetPortValue  (uint8 Copy_Port ,   uint8 Copy_Value );
 
 uint8 DIO_GetPinValue (uint8 Copy_Port , uint8 Copy_Pin , uint8* Copy_Value);
 uint8 DIO_setInternalPullUp(uint8  Copy_Port ,  uint8 Copy_Pin);
-
+uint8 DIO_Toggle_PIN (uint8 Copy_Port , uint8 Copy_Pin);
 
 #endif

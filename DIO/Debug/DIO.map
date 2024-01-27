@@ -141,7 +141,7 @@ LOAD f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x2974
+.text           0x00000000     0x2a8a
  *(.vectors)
  .vectors       0x00000000       0x54 f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x00000000                __vectors
@@ -264,19 +264,22 @@ LOAD f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  .text.DIO_setInternalPullUp
                 0x000011c2      0x1ae ./DIO_Program.o
                 0x000011c2                DIO_setInternalPullUp
- .text.main     0x00001370     0x1592 ./main.o
-                0x00001370                main
- .text.libgcc   0x00002902        0x0 f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x00002902       0x38 f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
-                0x00002902                __prologue_saves__
- .text.libgcc   0x0000293a       0x36 f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
-                0x0000293a                __epilogue_restores__
- .text.libgcc   0x00002970        0x0 f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
-                0x00002970                . = ALIGN (0x2)
+ .text.DIO_Toggle_PIN
+                0x00001370      0x116 ./DIO_Program.o
+                0x00001370                DIO_Toggle_PIN
+ .text.main     0x00001486     0x1592 ./main.o
+                0x00001486                main
+ .text.libgcc   0x00002a18        0x0 f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00002a18       0x38 f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+                0x00002a18                __prologue_saves__
+ .text.libgcc   0x00002a50       0x36 f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+                0x00002a50                __epilogue_restores__
+ .text.libgcc   0x00002a86        0x0 f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x00002a86                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00002970        0x0 f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x00002970                exit
-                0x00002970                _exit
+ .fini9         0x00002a86        0x0 f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00002a86                exit
+                0x00002a86                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -295,11 +298,11 @@ LOAD f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00002970        0x4 f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x00002a86        0x4 f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00002974                _etext = .
+                0x00002a8a                _etext = .
 
-.data           0x00800060        0x8 load address 0x00002974
+.data           0x00800060        0x8 load address 0x00002a8a
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
@@ -353,8 +356,8 @@ LOAD f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  *(.bss*)
  *(COMMON)
                 0x00800068                PROVIDE (__bss_end, .)
-                0x00002974                __data_load_start = LOADADDR (.data)
-                0x0000297c                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00002a8a                __data_load_start = LOADADDR (.data)
+                0x00002a92                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800068        0x0
                 0x00800068                PROVIDE (__noinit_start, .)
@@ -379,15 +382,15 @@ LOAD f:/amit/eclipse/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x1788
+.stab           0x00000000     0x1860
  *(.stab)
- .stab          0x00000000      0x924 ./DIO_Program.o
- .stab          0x00000924      0xe64 ./main.o
+ .stab          0x00000000      0x9fc ./DIO_Program.o
+ .stab          0x000009fc      0xe64 ./main.o
                                0x108c (size before relaxing)
 
-.stabstr        0x00000000      0x8df
+.stabstr        0x00000000      0x8f5
  *(.stabstr)
- .stabstr       0x00000000      0x8df ./DIO_Program.o
+ .stabstr       0x00000000      0x8f5 ./DIO_Program.o
 
 .stab.excl
  *(.stab.excl)

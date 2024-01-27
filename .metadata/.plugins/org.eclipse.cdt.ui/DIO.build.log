@@ -1,5 +1,13 @@
-22:26:14 **** Incremental Build of configuration Debug for project DIO ****
+20:23:26 **** Build of configuration Debug for project DIO ****
 make all 
+'Building file: ../DIO_Program.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"DIO_Program.d" -MT"DIO_Program.o" -c -o "DIO_Program.o" "../DIO_Program.c"
+In file included from ../DIO_Interface.h:19,
+                 from ../DIO_Program.c:11:
+f:/amit/eclipse/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+'Finished building: ../DIO_Program.c'
+' '
 'Building file: ../main.c'
 'Invoking: AVR Compiler'
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
@@ -27,7 +35,7 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:   10620 bytes (32.4% Full)
+Program:   10898 bytes (33.3% Full)
 (.text + .data + .bootloader)
 
 Data:          8 bytes (0.4% Full)
@@ -37,5 +45,5 @@ Data:          8 bytes (0.4% Full)
 'Finished building: sizedummy'
 ' '
 
-22:26:16 Build Finished. 0 errors, 1 warnings. (took 1s.613ms)
+20:23:29 Build Finished. 0 errors, 2 warnings. (took 2s.297ms)
 

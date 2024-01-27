@@ -240,4 +240,34 @@ uint8 DIO_setInternalPullUp(uint8  Copy_Port ,  uint8 Copy_Pin)
 
 	return local_ErrorStatus;
 }
+uint8 DIO_Toggle_PIN (uint8 Copy_Port , uint8 Copy_Pin)
+{
+	uint8 local_ErrorStatus=0;
+	if (Copy_Pin <= 7)
+	{
+		switch(Copy_Port)
+		{
+			case DIO_PORTA:
+				TOGGLEBIT(PORTA,Copy_Pin);
+				break;
+			case DIO_PORTB:
+				TOGGLEBIT(PORTB,Copy_Pin);
+				break;
+			case DIO_PORTC:
+				TOGGLEBIT(PORTC,Copy_Pin);
+					break;
+			case DIO_PORTD:
+				TOGGLEBIT(PORTD,Copy_Pin);
+				break;
+			default:
+				local_ErrorStatus=1;
+				break;
+		}
+		}
+	else
+	{
+		local_ErrorStatus=1;
+	}
+		return local_ErrorStatus;
+}
 
