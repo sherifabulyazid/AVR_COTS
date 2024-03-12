@@ -8,6 +8,7 @@
 #ifndef TIMER_INTERFACE_H_
 #define TIMER_INTERFACE_H_
 
+
 /******************************************TIMER0****************************************************/
 void Timer0_CTC(void);
 uint8 Timer0_CTC_CallBack( void (*Copy_Timer0_CTC_CallBackFun)(void));
@@ -32,4 +33,6 @@ void Timer1_PWM_Phase_Correct_10_bit(void);
 void Timer1_PWM_Fast_ICR1(uint16 copy_Req_Freq);
 void Timer1_PWM_Phase_Correct_ICR1(uint16 copy_Req_Freq);
 
+void Enable_Global_Interrupt (void);
+void Disable_Global_Interrupt (void);
 #endif /* TIMER_INTERFACE_H_*/

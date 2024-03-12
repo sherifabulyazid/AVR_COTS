@@ -16,9 +16,18 @@ void (*Timer0_Normal_CallBackFun)(void)=NULL;
 void (*Timer1_Normal_CallBackFun)(void)=NULL;
 void (*Timer1_CTC_CallBackFun)(void)=NULL;
 
-static uint8 OV_Counts_Timer0=0;
 static float32 OV_Counts_Timer1=0;
 
+void Enable_Global_Interrupt (void)
+{
+	/*enable global interrupt*/
+	SETBIT(SREG,GIE);
+}
+void Disable_Global_Interrupt (void)
+{
+	/*enable global interrupt*/
+	CLEARBIT(SREG,GIE);
+}
 
 void Timer0_Normal(void)
 {
@@ -93,8 +102,6 @@ void Timer0_CTC(void)
 	TCCR0 |=CLOCKSELECT;
 	/*enable interrupt for CTC mode*/
 	SETBIT(TIMSK,TIMSK_OCIE0);
-	/*enable global interrupt*/
-	SETBIT(SREG,GIE);
 	/*set compare match value*/
 	OCR0 = TIMER0_COMPARE_MATCH_VALUE;
 
@@ -109,7 +116,7 @@ uint8 Timer0_CTC_CallBack( void (*Copy_Timer0_CTC_CallBackFun)(void) )
 	}
 	else
 	{
-		Timer0_CTC_CallBackFun=Copy_Timer0_CTC_CallBackFun;
+		Timer0_CTC_CallBackFun = Copy_Timer0_CTC_CallBackFun;
 	}
 	return localError;
 }

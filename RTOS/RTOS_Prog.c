@@ -9,14 +9,17 @@
 #include "RTOS_Config.h"
 #include "RTOS_Interface.h"
 #include "RTOS_Private.h"
+#include "Timer_interface.h"
 
-task_t Tasks_Array[TASK_NUMS] = {0};
+task_t Tasks_Array[TASK_NUMS] = {{0}};
 
 void RTOS_Start(void)
 {
 	Timer0_CTC_CallBack(&RTOS_schedular);
+	Enable_Global_Interrupt();
 	Timer0_CTC();
 }
+
 uint8 RTOS_CreateTask(uint8 copy_priority, uint16 copy_periodicity, uint16 copy_firstDelay, void (*copy_Task_Funcion)(void))
 {
 	uint8 local_error=0;
@@ -35,9 +38,22 @@ uint8 RTOS_CreateTask(uint8 copy_priority, uint16 copy_periodicity, uint16 copy_
 
 	return local_error;
 }
+void RTOS_SuspendTask(uint8 copy_priority)
+{
+	Tasks_Array[copy_priority].taskState=TASK_STATE_SUSPENDED;
+}
+void RTOS_ResumeTask(uint8 copy_priority)
+{
+	Tasks_Array[copy_priority].taskState=TASK_STATE_RUNNING;
+}
+void RTOS_DeleteTask(uint8 copy_priority)
+{
+	Tasks_Array[copy_priority].task_fn_ptr = NULL;
+}
 
 static void RTOS_schedular(void)
 {
+	
 	uint8 iterator=0;
 
 	for (iterator=0; iterator<TASK_NUMS; iterator++)

@@ -24,7 +24,7 @@ uint8 get_button_pressed(void)
 
 	for(column=4;column<8;column++)
 	{
-		setPinVAlue(KEYPAD_PORT,column,OUTPUT_LOW);
+		DIO_setPinVAlue(KEYPAD_PORT,column,OUTPUT_LOW);
 		for(row=0;row<4;row++)
 		{
 			DIO_GetPinValue(KEYPAD_PORT,row,&buttonStatus);
@@ -34,12 +34,12 @@ uint8 get_button_pressed(void)
 				{
 					DIO_GetPinValue(KEYPAD_PORT,row,&buttonStatus);
 				}
-				setPinVAlue(KEYPAD_PORT,column,OUTPUT_HIGH);
+				DIO_setPinVAlue(KEYPAD_PORT,column,OUTPUT_HIGH);
 				buttonPressed= buttonArray[row][column-4];
 				return buttonPressed;
 			}
 		}
-		setPinVAlue(KEYPAD_PORT,column,OUTPUT_HIGH);
+		DIO_setPinVAlue(KEYPAD_PORT,column,OUTPUT_HIGH);
 	}
 
 	return buttonPressed;

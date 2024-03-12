@@ -21,4 +21,8 @@ typedef struct {
 
 void RTOS_Start(void);
 uint8 RTOS_CreateTask(uint8 copy_priority, uint16 copy_periodicity, uint16 copy_firstDelay, void (*copy_Task_Funcion)(void));
+void RTOS_SuspendTask(uint8 copy_priority);
+void RTOS_ResumeTask(uint8 copy_priority);
+void RTOS_DeleteTask(uint8 copy_priority);
+
 #endif /* RTOS_INTERFACE_H_ */

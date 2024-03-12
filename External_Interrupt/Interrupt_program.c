@@ -20,12 +20,13 @@ void ISR_CallBack_INT0( void (*copy_INT_ptr)(void) )
 	if(copy_INT_ptr != NULL)
 		Global_ptr_INT0=copy_INT_ptr;
 }
-
+/*
 ISR(VECT_INT0)
 {
 	if(Global_ptr_INT0 !=NULL)
 		Global_ptr_INT0();
 }
+*/
 void ISR_CallBack_INT1( void (*copy_INT_ptr)(void) )
 {
 	if(copy_INT_ptr != NULL)

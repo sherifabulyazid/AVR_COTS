@@ -1,5 +1,5 @@
-#include "Library/STD_TYPES.h"
-#include "Library/BIT_MATH.h"
+#include "STD.h"
+#include "BIT_MATH.h"
 #include <util/delay.h>
 #include "DIO_Interface.h"
 #include "ADC_interface.h"
@@ -13,14 +13,14 @@ static uint8 ComparePasswords(uint8 *pass1 , uint8 *pass2 );
 int main (void)
 {
 	DIO_SetPortDirection(DIO_PORTB,PORT_OUTPUT);//LCD data
-	setPinDirection(DIO_PORTA,PIN5,OUTPUT);// LCD EN
-	setPinDirection(DIO_PORTA,PIN6,OUTPUT); // LCD R/W
-	setPinDirection(DIO_PORTA,PIN7,OUTPUT); //LCD RS
+	DIO_setPinDirection(DIO_PORTA,PIN5,OUTPUT);// LCD EN
+	DIO_setPinDirection(DIO_PORTA,PIN6,OUTPUT); // LCD R/W
+	DIO_setPinDirection(DIO_PORTA,PIN7,OUTPUT); //LCD RS
 	DIO_SetPortDirection(DIO_PORTC, KEYPAD_Direction);
 	DIO_SetPortValue(DIO_PORTC,KEYPAD_Value);
-	setPinDirection(DIO_PORTD,PIN7,OUTPUT);//Lights
-	setPinDirection(DIO_PORTD,PIN4,OUTPUT);//Fan
-	setPinDirection(DIO_PORTD,PIN5,OUTPUT);//Servo motor
+	DIO_setPinDirection(DIO_PORTD,PIN7,OUTPUT);//Lights
+	DIO_setPinDirection(DIO_PORTD,PIN4,OUTPUT);//Fan
+	DIO_setPinDirection(DIO_PORTD,PIN5,OUTPUT);//Servo motor
 	ADC_init();
 	LCD_init();
 	uint8 valueADC=0;
@@ -33,6 +33,7 @@ int main (void)
 	uint8 choosenOption =0;
 	uint8 trials=0;
 	uint8 angle=0;
+	uint32 servo_adjust_time=20000;
 
 	LCD_SendString("Welcome To SMART HOME");
 	_delay_ms(1500);
@@ -54,22 +55,8 @@ int main (void)
 	LCD_ClearDisplay();
 	_delay_ms(2);
 
-	/*control servo motor using potentiometer*/
-	uint32 iterator_time=40000;
-	LCD_SendString("Adjust Servo");
-	_delay_ms(1000);
-	LCD_ClearDisplay();
-	while(iterator_time)
-	{
-		valueADC=ADC_StartConversion(ADC0);
-		angle=ADC_To_Angle(valueADC);
-		Timer1_Servo(angle);
-		iterator_time--;
-	}
-
 	while(1)
 	{
-
 		passStatus = ComparePasswords(passReal,passArr);
 		if(passStatus==FALSE)
 		{
@@ -101,6 +88,7 @@ int main (void)
 		}
 		else if(passStatus==TRUE)
 		{
+		/*control servo motor using potentiometer*/
 			LCD_SendString("Options:");
 			LCD_GoToXY(SecondLine, 0);
 			LCD_SendString("1-Display Temp");
@@ -116,6 +104,10 @@ int main (void)
 			LCD_SendString("4- Lights ON");
 			LCD_GoToXY(SecondLine, 0);
 			LCD_SendString("5- Lights OFF");
+			_delay_ms(1500);
+			LCD_ClearDisplay();
+			_delay_ms(2);
+			LCD_SendString("6-Adjust Angel  Of Curtains");
 			_delay_ms(1500);
 			LCD_ClearDisplay();
 			_delay_ms(2);
@@ -140,16 +132,27 @@ int main (void)
 					_delay_ms(2);
 					break;
 				case '2':
-					setPinVAlue(DIO_PORTD,PIN4,OUTPUT_HIGH);
+					DIO_setPinVAlue(DIO_PORTD,PIN4,OUTPUT_HIGH);
 					break;
 				case '3':
-					setPinVAlue(DIO_PORTD,PIN4,OUTPUT_LOW);
+					DIO_setPinVAlue(DIO_PORTD,PIN4,OUTPUT_LOW);
 					break;
 				case '4':
-					setPinVAlue(DIO_PORTD,PIN7,OUTPUT_HIGH);
+					DIO_setPinVAlue(DIO_PORTD,PIN7,OUTPUT_HIGH);
 					break;
 				case '5':
-					setPinVAlue(DIO_PORTD,PIN7,OUTPUT_LOW);
+					DIO_setPinVAlue(DIO_PORTD,PIN7,OUTPUT_LOW);
+					break;
+				case '6':
+					/*control servo motor using potentiometer*/
+					while(servo_adjust_time)
+					{
+						valueADC=ADC_StartConversion(ADC0);
+						angle=ADC_To_Angle(valueADC);
+						Timer1_Servo(angle);
+						servo_adjust_time--;
+					}
+					servo_adjust_time=20000;
 					break;
 				default:
 					break;
@@ -169,5 +172,4 @@ static uint8 ComparePasswords(uint8 *pass1 , uint8 *pass2 )
 	{
 		return FALSE;
 	}
-
 }
